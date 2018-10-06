@@ -19,8 +19,9 @@ class Patient
     appointment = Appointment.new(date, self , doctor)
     
     @appointments << appointment
-    doctor.appointments << self
+    
     appointment.doctor = doctor
+    doctor.appointments << appointment
     @doctors << doctor
     appointment
   end
