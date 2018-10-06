@@ -19,7 +19,7 @@ class Patient
     appointment = Appointment.new(date, self , doctor)
     
     @appointments << appointment
-    doctor.appointments << doctor
+    doctor.appointments << self
     appointment.doctor = doctor
     @doctors << doctor
     appointment
